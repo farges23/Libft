@@ -6,7 +6,7 @@
 /*   By: farges <farges@student.42barcelona.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 17:09:45 by farges            #+#    #+#             */
-/*   Updated: 2024/10/13 21:01:54 by farges           ###   ########.fr       */
+/*   Updated: 2024/10/13 21:04:58 by farges           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,17 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	slen;
 
 	i = 0;
-	dlen = ft_strlen(dest);
+	dlen = ft_strlen(dst);
 	slen = ft_strlen(src);
 	if (size <= dlen)
 		return (slen + size);
 	j = dlen;
 	while (src [i] != '\0' && i < size - dlen - 1)
 	{
-		dest[j] = src[i];
+		dst[j] = src[i];
 		i++;
 		j++;
 	}
-	dest[j] = '\0';
+	dst[j] = '\0';
 	return (dlen + slen);
 }
