@@ -6,7 +6,7 @@
 /*   By: farges <farges@student.42barcelona.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 17:09:45 by farges            #+#    #+#             */
-/*   Updated: 2024/10/13 20:13:38 by farges           ###   ########.fr       */
+/*   Updated: 2024/10/13 20:18:44 by farges           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	if (!big)
 		return (NULL);
-	if (little == '\0')
+	if (*little == '\0')
 		return ((char *)big);
 	i = 0;
 	while ((i < len) && (big[i]))
