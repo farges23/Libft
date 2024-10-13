@@ -6,7 +6,7 @@
 /*   By: farges <farges@student.42barcelona.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 17:09:45 by farges            #+#    #+#             */
-/*   Updated: 2024/10/13 17:09:45 by farges           ###   ########.fr       */
+/*   Updated: 2024/10/13 22:01:53 by farges           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,9 @@ void	ft_putnbr_fd(int n, int fd)
 		write(fd, "-", 1);
 		n = -n;
 	}
-	if (n > 9)
+	if (n >= 9)
 	{
 		ft_putnbr_fd(n / 10, 1);
-		ft_putnbr_fd(n % 10, 1);
 	}
-	else
-	{
-		c = n + '0';
-		write(fd, &c, 1);
-	}
-}
+	c = (n % 10) + '0';
+	write(fd, &c, 1);
