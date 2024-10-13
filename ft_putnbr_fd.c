@@ -6,7 +6,7 @@
 /*   By: farges <farges@student.42barcelona.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 17:09:45 by farges            #+#    #+#             */
-/*   Updated: 2024/10/13 22:06:34 by farges           ###   ########.fr       */
+/*   Updated: 2024/10/13 22:09:51 by farges           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (n >= 10)
 	{
-		ft_putnbr_fd(n / 10, 1);
+		ft_putnbr_fd(n / 10, fd);
 	}
 	c = (n % 10) + '0';
 	write(fd, &c, 1);
