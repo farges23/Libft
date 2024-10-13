@@ -6,7 +6,7 @@
 /*   By: farges <farges@student.42barcelona.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 17:09:45 by farges            #+#    #+#             */
-/*   Updated: 2024/10/13 18:19:02 by farges           ###   ########.fr       */
+/*   Updated: 2024/10/13 19:32:54 by farges           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t		i;
+	size_t	i;
 	int		j;
 	char	*aux;
 

@@ -6,23 +6,23 @@
 /*   By: farges <farges@student.42barcelona.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 17:09:45 by farges            #+#    #+#             */
-/*   Updated: 2024/10/13 18:08:13 by farges           ###   ########.fr       */
+/*   Updated: 2024/10/13 19:35:25 by farges           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void     free_array(char **str)
+static void	free_array(char **str)
 {
-        int     i;
+	int	i;
 
-        i = 0;
-        while (str[i])
-        {
-                free(str[i]);
-                i++;
-        }
-        free(str);
+	i = 0;
+	while (str[i])
+	{
+		free(str[i]);
+		i++;
+	}
+	free(str);
 }
 
 static int	count_words(char *str, char c)
