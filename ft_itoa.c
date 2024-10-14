@@ -6,7 +6,7 @@
 /*   By: farges <farges@student.42barcelona.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 17:09:45 by farges            #+#    #+#             */
-/*   Updated: 2024/10/13 17:17:46 by farges           ###   ########.fr       */
+/*   Updated: 2024/10/14 03:30:54 by farges           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,9 @@ int	ft_counter(int n)
 	int	i;
 
 	i = 0;
-	if (n == 0)
+	if (n <= 0)
 		i++;
-	if (n < 0)
-	{
-		n = -n;
-		i++;
-	}
-	while (n > 0)
+	while (n != 0)
 	{
 		n = n / 10;
 		i++;
@@ -47,15 +42,15 @@ char	*ft_itoa(int n)
 		new[0] = '0';
 	if (n < 0)
 	{
-		n = -n;
 		new[0] = '-';
+		n = -n;
 	}
-	new[i] = '\0';
 	while (n > 0)
 	{
-		new[i - 1] = n % 10 + '0';
+		new[i - 1] = (n % 10) + '0';
 		n = n / 10;
 		i--;
 	}
+	new = '\0';
 	return (new);
 }
