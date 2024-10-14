@@ -6,7 +6,7 @@
 /*   By: farges <farges@student.42barcelona.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 17:03:52 by farges            #+#    #+#             */
-/*   Updated: 2024/10/14 03:49:07 by farges           ###   ########.fr       */
+/*   Updated: 2024/10/14 03:50:54 by farges           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_atoi(const char *nptr)
 	while (nptr[i] == 32 || (nptr[i] >= 9 && nptr[i] <= 13))
 		i++;
 	if (nptr[i] == '-' || nptr[i] == '+')
-		if (str[i++] == '-')
+		if (nptr[i++] == '-')
 			signe = -1;
 	while (ft_isdigit(nptr[i]))
 	{
