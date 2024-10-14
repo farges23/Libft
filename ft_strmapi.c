@@ -6,7 +6,7 @@
 /*   By: farges <farges@student.42barcelona.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 17:09:45 by farges            #+#    #+#             */
-/*   Updated: 2024/10/14 03:10:52 by farges           ###   ########.fr       */
+/*   Updated: 2024/10/14 03:15:41 by farges           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	j = 0;
 	while (s[i] != '\0')
 	{
-		f(i, s[i]);
-		c[j++] = s[i++];
+		c[j] = f(i, s[i]);
+		j++;
+		i++;
 	}
 	c[j] = '\0';
 	return (c);
