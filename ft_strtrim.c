@@ -6,7 +6,7 @@
 /*   By: farges <farges@student.42barcelona.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 17:09:45 by farges            #+#    #+#             */
-/*   Updated: 2024/10/14 03:20:40 by farges           ###   ########.fr       */
+/*   Updated: 2024/10/14 03:22:45 by farges           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
 	j = ft_strlen((char *)s1) - 1;
-	while ((j >= i && ft_strchr(set, s1[j]))
+	while (j >= i && ft_strchr(set, s1[j]))
 		j--;
 	new = (char *)malloc((j - i + 2) * sizeof(char));
 	if (!new)
